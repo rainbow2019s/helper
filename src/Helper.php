@@ -1,7 +1,7 @@
 <?php
 namespace tanghao2018\helper;
 
-trait helper
+trait Helper
 {
   /**
    * 验证码字母生成器
