@@ -1,6 +1,12 @@
 <?php
 namespace tanghao2018\helper;
 
+/**
+ * author: hao.liu
+ * date: 2018.08.12
+ */
+
+
 trait Helper
 {
   /**
@@ -32,6 +38,23 @@ trait Helper
     fclose($stdout);
   }
 
+
+  /**
+   * 创建表单(Request获取全部请求后转换成表单类)
+   * 
+   */
+  public function createForm($params)
+  {
+    $form = new \stdClass;
+    foreach($params as $key=>$value){
+      $form->{$key} = $value;
+    }
+
+    return $form;
+  }
+
+
+  
 
 
 }
